@@ -28,6 +28,10 @@ class MongoDBPipeline(object):
                 raise DropItem("Missing {0}!".format(data))
         if valid:
             item = dict(item)
-            self.connection.replace_one({'movie_name':item.get('movie_name',''),'ranking':item.get('ranking','')},item,upsert = True)
+            self.connection.replace_one(
+                {
+                    'movie_name':item.get('movie_name',''),
+                    'ranking':item.get('ranking','')},
+                    item,upsert = True)
             log.msg("add to db", level=log.DEBUG, spider=spider)
         return item

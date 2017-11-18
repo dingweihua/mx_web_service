@@ -37,3 +37,4 @@ class DoubanMovieSpider(Spider):
         if next_url:
             next_url = 'https://movie.douban.com/top250' + next_url[0]
             yield Request(next_url, headers=self.headers)
+            
