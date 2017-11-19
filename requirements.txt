@@ -1,3 +1,4 @@
+ujson
 asn1crypto==0.23.0
 attrs==17.3.0
 Automat==0.6.0

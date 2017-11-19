@@ -87,3 +87,6 @@ celerybeat-schedule
 env/
 venv/
 ENV/
+
+# PyCharm
+.idea/
